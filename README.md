@@ -58,6 +58,38 @@ Control your microphone effortlessly on Linux! Mute and unmute with a single com
 
 You'll need **Bash version 2.0 or higher** to run `mictgl.sh` correctly. This script primarily interacts with system audio backends and requires specific utilities for each (e.g., `alsa-utils`, `pulseaudio-utils`, `pipewire-utils`).
 
+---
+
+## Compatibility
+
+The script has been extensively tested on the following Linux distributions and desktop environments, with the results below.
+
+| Distribution              | Desktop Environment (DE) | Status                          | Observations                                                                                                                                                                                                                            |
+|:------------------------- |:------------------------ |:------------------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Debian 12**             | GNOME                    | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+|                           | KDE Plasma               | ⚠️ Functional, with adjustments | The notification icon appears cropped. To fix this, edit the `ICONS_THEME` variable to `"custom"`, `UNMUTED_ICON` to `"mic-on"`, `MUTED_ICON` to `"mic-off"`, and `ERROR_ICON` to `"microphone"` in the script's configuration section. |
+|                           | XFCE                     | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+|                           | Cinnamon                 | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+| **Ubuntu 24.04 LTS**      | GNOME                    | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+| **Linux Mint 22.1**       | Cinnamon                 | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+|                           | XFCE                     | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+| **Fedora Workstation 42** | GNOME                    | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+| **Arch Linux**            | GNOME                    | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+|                           | KDE Plasma               | ⚠️ Functional, with adjustments | The notification icon appears cropped. To fix this, edit the `ICONS_THEME` variable to `"custom"`, `UNMUTED_ICON` to `"mic-on"`, `MUTED_ICON` to `"mic-off"`, and `ERROR_ICON` to `"microphone"` in the script's configuration section. |
+|                           | XFCE                     | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+|                           | Cinnamon                 | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+|                           | i3wm                     | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+|                           | Hyprland                 | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+| **openSUSE Tumbleweed**   | GNOME                    | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+|                           | KDE Plasma               | ⚠️ Functional, with adjustments | The notification icon appears cropped. To fix this, edit the `ICONS_THEME` variable to `"custom"`, `UNMUTED_ICON` to `"mic-on"`, `MUTED_ICON` to `"mic-off"`, and `ERROR_ICON` to `"microphone"` in the script's configuration section. |
+|                           | XFCE                     | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+|                           | Cinnamon                 | ✅ Functional                    | -                                                                                                                                                                                                                                       |
+
+✅ `Functional:` Tested and works as expected.
+⚠️ `Functional, with adjustments:` Requires configuration adjustments to work correctly.
+
+---
+
 ### Dependencies
 
 Before running `mictgl`, ensure you have the following core utilities installed:
