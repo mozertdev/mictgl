@@ -1,10 +1,10 @@
-# mictgl - Microphone Toggle Script
+# mictgl - Microphone Toggle Script 🎙️
 
 **Version 0.1 (beta)**
 
-Control your microphone effortlessly on Linux! Mute and unmute with a single command, enhanced by customizable desktop notifications and sound alerts across ALSA, PulseAudio, and PipeWire.
+Control your microphone effortlessly on Linux! 🐧 Mute and unmute with a single command, enhanced by customizable desktop notifications and sound alerts across ALSA, PulseAudio, and PipeWire. It's a blazingly fast and lightweight solution... take a look.
 
-`mictgl` is a minimalist Bash script designed to provide quick and intuitive control over your microphone's mute/unmute state on Linux systems. It integrates seamlessly with ALSA, PulseAudio, and PipeWire, offering visual feedback via desktop notifications and optional sound alerts. This tool is ideal for integration into system hotkeys, enabling instant microphone toggling with ease.
+`mictgl` is a minimalist Bash script designed to give you quick and intuitive control over your microphone's mute/unmute state on Linux systems. It's incredibly lightweight, uses minimal system resources, and is ideal for integration into system hotkeys, enabling instant microphone toggling with ease! ✨
 
 ---
 
@@ -12,33 +12,35 @@ Control your microphone effortlessly on Linux! Mute and unmute with a single com
 
 - **Universal Microphone Control:** Supports the most common Linux sound systems:
   
-  - **ALSA** (Advanced Linux Sound Architecture)
+  - **ALSA** (Advanced Linux Sound Architecture) 🔊
   
-  - **PulseAudio**
+  - **PulseAudio** 🎧
   
-  - **PipeWire**
+  - **PipeWire** 🎶
 
-- **Instant Toggling:** Mute or unmute your microphone with a single command, perfect for quick access via hotkeys.
+- **Instant Toggling:** Mute or unmute your microphone with a single command, perfect for quick access via hotkeys. ⚡
 
-- **Visual Feedback:** Provides clear desktop notifications (via `notify-send`) indicating the microphone's current state (muted/unmuted) and any errors.
+- **Extremely Lightweight & Fast:** Built for speed, this script uses minimal resources to give you a responsive and snappy experience. 🚀
+
+- **Visual Feedback:** Provides clear desktop notifications (via `notify-send`) indicating the microphone's current state (muted/unmuted) and any errors. 🔔
 
 - **Customizable Alerts:**
   
-  - **Themable Icons:** Choose from built-in themes (`dark-nox`, `light-lumen`) or use **custom SVG icons** for notifications.
+  - **Themable Icons:** Choose from built-in themes (`dark-nox`, `light-lumen`) or use **custom SVG icons** for notifications. 🎨
   
-  - **Themable Sound Effects:** Select from built-in sound themes (`arcade-flash`, `arcade-signal`) or define **custom WAV sound files** for alerts.
+  - **Themable Sound Effects:** Select from built-in sound themes (`arcade-flash`, `arcade-signal`) or define **custom WAV sound files** for alerts. 🔊
 
 - **Internationalization (i18n):** Built-in support for multiple languages:
   
-  - English
+  - English 🇺🇸
   
-  - Portuguese (Brazil)
+  - Portuguese (Brazil) 🇧🇷
   
-  - Español
+  - Español 🇪🇸
 
 - **Automatic Localization (l10n):**
   
-  - Intelligently detects the system's language settings.
+  - Intelligently detects the system's language settings. 🤖
   
   - Offers the flexibility to manually set the language using the `SYSTEM_LANG` variable.
   
@@ -49,8 +51,6 @@ Control your microphone effortlessly on Linux! Mute and unmute with a single com
     - `pt_BR` (Portuguese - Brazil)
     
     - `es_ES` (Español)
-
-- **Robust Dependency Checks:** Ensures all necessary audio utilities (`amixer`, `pactl`, `wpctl`) and notification tools (`notify-send`) are present.
 
 ---
 
@@ -108,35 +108,113 @@ Before running `mictgl`, ensure you have the following core utilities installed:
 
 Below are common installation commands for major Linux distributions:
 
+<details>
+<summary><b>Debian/Ubuntu-based distributions</b></summary>
+
+**Required***
+
 ```bash
-# --- Debian/Ubuntu-based distributions ---
 sudo apt update && sudo apt install coreutils util-linux grep diffutils alsa-utils libnotify-bin
-# For PulseAudio (*optional):
+```
+
+**Optional**
+
+**PulseAudio**
+
+```bash
 sudo apt install pulseaudio-utils
-# For PipeWire (*optional):
+```
+
+**PipeWire**
+
+```bash
 sudo apt install pipewire pipewire-audio-client-libraries wireplumber
+```
 
-# --- Fedora/RHEL-based distributions ---
+</details>
+
+---
+
+<details>
+<summary><b>Fedora/RHEL-based distributions</b></summary>
+
+**Required***
+
+```bash
 sudo dnf install coreutils util-linux grep diffutils alsa-utils libnotify
-# For PulseAudio (*optional):
+```
+
+**Optional**
+
+**PulseAudio**
+
+```bash
 sudo dnf install pulseaudio-utils
-# For PipeWire (*optional):
+```
+
+**PipeWire**
+
+```bash
 sudo dnf install pipewire pipewire-utils pipewire-pulseaudio wireplumber
+```
 
-# --- Arch Linux-based distributions ---
+</details>
+
+---
+
+<details>
+<summary><b>Arch Linux-based distributions</b></summary>
+
+**Required***
+
+```bash
 sudo pacman -Sy coreutils util-linux grep diffutils alsa-utils libnotify
-# For PulseAudio (*optional):
-sudo pacman -S pulseaudio pulseaudio-alsa
-# For PipeWire (*optional):
-sudo pacman -S pipewire pipewire-pulse wireplumber wireplumber
+```
 
-# --- openSUSE-based distributions ---
+**Optional**
+
+**PulseAudio**
+
+```bash
+sudo pacman -S pulseaudio pulseaudio-alsa
+```
+
+**PipeWire**
+
+```bash
+sudo pacman -S pipewire pipewire-pulse wireplumber
+```
+
+</details>
+
+---
+
+<details>
+<summary><b>openSUSE-based distributions</b></summary>
+
+**Required***
+
+```bash
 sudo zypper install coreutils util-linux grep diffutils alsa-utils libnotify
-# For PulseAudio (*optional):
+```
+
+**Optional**
+
+**PulseAudio**
+
+```bash
 sudo zypper install pulseaudio-utils
-# For PipeWire (*optional):
+```
+
+**PipeWire**
+
+```bash
 sudo zypper install pipewire pipewire-pulseaudio pipewire-utils wireplumber
 ```
+
+</details>
+
+---
 
 PS: You probably already have most of the dependencies mentioned above installed on your system.
 
