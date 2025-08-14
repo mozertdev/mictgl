@@ -2,7 +2,7 @@
 
 **Version 0.1 (beta)**
 
-Control your microphone effortlessly on Linux! 🐧 Mute and unmute with a single command, enhanced by customizable desktop notifications and sound alerts across ALSA, PulseAudio, and PipeWire. It's a blazingly fast and lightweight solution... take a look.
+Control your microphone effortlessly on Linux! 🐧 Mute and unmute with a single command, enhanced by customizable desktop notifications and sound alerts across ALSA, PulseAudio and PipeWire. It's a blazingly fast and lightweight solution... take a look.
 
 `mictgl` is a minimalist Bash script designed to give you quick and intuitive control over your microphone's mute/unmute state on Linux systems. It's incredibly lightweight, uses minimal system resources, and is ideal for integration into system hotkeys, enabling instant microphone toggling with ease! ✨
 
@@ -54,18 +54,12 @@ Control your microphone effortlessly on Linux! 🐧 Mute and unmute with a singl
 
 ---
 
-## Getting Started
-
-You'll need **Bash version 2.0 or higher** to run `mictgl.sh` correctly. This script primarily interacts with system audio backends and requires specific utilities for each (e.g., `alsa-utils`, `pulseaudio-utils`, `pipewire-utils`).
-
----
-
 ## Compatibility
 
 The script has been extensively tested on the following Linux distributions and desktop environments, with the results below.
 
 | Distribution              | Desktop Environment (DE) | Status                          | Observations                                                                                                                                                                                                                            |
-|:------------------------- |:------------------------ |:------------------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------------- | ------------------------ | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Debian 12**             | GNOME                    | ✅ Functional                    | -                                                                                                                                                                                                                                       |
 |                           | KDE Plasma               | ⚠️ Functional, with adjustments | The notification icon appears cropped. To fix this, edit the `ICONS_THEME` variable to `"custom"`, `UNMUTED_ICON` to `"mic-on"`, `MUTED_ICON` to `"mic-off"`, and `ERROR_ICON` to `"microphone"` in the script's configuration section. |
 |                           | XFCE                     | ✅ Functional                    | -                                                                                                                                                                                                                                       |
@@ -87,6 +81,12 @@ The script has been extensively tested on the following Linux distributions and 
 
 ✅ `Functional:` Tested and works as expected.
 ⚠️ `Functional, with adjustments:` Requires configuration adjustments to work correctly.
+
+---
+
+## Getting Started
+
+You'll need **Bash version 2.0 or higher** to run `mictgl.sh` correctly. This script primarily interacts with system audio backends and requires specific utilities for each (e.g., `alsa-utils`, `pulseaudio-utils`, `pipewire-utils`).
 
 ---
 
